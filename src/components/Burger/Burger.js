@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export class Burger extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+const Burger = () => {
+  return (
+    <div>
+      
+    </div>
+  )
 }
 
-export default Burger
+export default Burger;

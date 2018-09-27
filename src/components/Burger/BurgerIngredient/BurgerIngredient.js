@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import classes from './burgerIngredient.css';
 
@@ -8,7 +8,7 @@ const burgerIngredient = ( props ) => {
     switch(props.type) {
         case ('bread-bottom'):
             ingredient = <div className={classes.BreadBottom}></div>;
-            break;            
+            break;
         case ('bread-top'):
             ingredient = (
                 <div className={classes.BreadTop}>
@@ -39,6 +39,6 @@ const burgerIngredient = ( props ) => {
     }
 
     return ingredient;
-};
+}
 
 export default burgerIngredient;

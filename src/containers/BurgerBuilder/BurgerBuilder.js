@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BurgerBuilder extends Component {
+class BurgerBuilder extends Component {
     render () {
         return (
             <React.Fragment>
@@ -10,3 +10,5 @@ export default class BurgerBuilder extends Component {
         );
     }
 }
+
+export default BurgerBuilder;
