@@ -3,19 +3,28 @@ import React from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './SideDrawer.css';
+import Backdrop from '../../UI/Backdrop/Backdrop';
 
 const SideDrawer = ( props ) => {
+  let attachedClasses = [classes.SideDrawer, classes.Close];
+  if(props.open) {
+    attachedClasses = [classes.SideDrawer, classes.pen];
+  }
+
   return (
-    <div className={classes.SideDrawer}>
-        <div className={classes.Logo}>
-            <Logo />
-        </div>
+    <React.Fragment>
+        <Backdrop show={props.open} clicked={props.closed}/>
+        <div className={attachedClasses.join(' ')}>
+            <div className={classes.Logo}>
+                <Logo />
+            </div>
+            
+            <nav>
+                <NavigationItems />
+            </nav>
         
-        <nav>
-            <NavigationItems />
-        </nav>
-      
-    </div>
+        </div>
+    </React.Fragment>
   )
 }
 
